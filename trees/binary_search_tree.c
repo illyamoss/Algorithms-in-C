@@ -150,7 +150,7 @@ int main(void)
         int min = 50;
         int max = 100;        
 
-        int random = min + rand() % (max - min + 1);       
+        int random = min + (rand() % (max - min + 1));      
 
         insertIteratively(&root, random);
 
