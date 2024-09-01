@@ -9,6 +9,8 @@ In bubble sort algorithm,
 - in this way, the largest element is moved to the rightmost end at first.
 - This process is then continued to find the second largest and place it and so on until data is sorted.
 
+Time complexity: O(n^2)
+Space complexity: O(1)
 
 */
 
