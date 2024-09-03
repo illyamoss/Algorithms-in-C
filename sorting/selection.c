@@ -3,6 +3,9 @@
 Selection sort - simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest)
 element from the unsorted poriton of the list and moving it to the sorted portion of the list.
 
+Time Complexity: O(n^2)
+Space complexity: O(1)
+
 */
 
 #include <stdio.h>
