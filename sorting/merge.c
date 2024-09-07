@@ -11,6 +11,30 @@ Time complexity:
 
 Space Complexity: O(n), additional space is required for the temprorary array used during merging.
 
+Advantages:
+- Stability: Merge sort is a stable sorting algorithm, which means it maintains
+  the relative order of equal elements in the input array.
+- Guaranteed worst-case performacne: Merge-sort has a worst-case time complexity
+  of O(N log N), which means it performs well even on large datasets.
+- Simple to impolement: the divide-and-conquer approach is straightformward.
+- Naturally Parallel: We independently merge subarrays that makes it suitable
+  for parallel processing.
+
+Disadvantages:
+- Space complexity: MS requires additional memory to store
+  merged sub-arrays during the sorting process.
+- Not in-place: Merge sort is not an in-place sorting algorithm,
+  which means it requires additional memory to store the sorted data.
+  This can be a disadvantage in applications where memory usage is a concern.
+- Slower than QuickSort in general. QuickSort is more cache friendly because
+  it works in place.
+
+Merge sort vs QuickSort:
+Quick sort is typically faster than merge sort when the data is stored in memory.
+However, when the data set is huge and is stored on external devices such as a hard
+drive, merge sort is the clear winner in terms of speed. It minimizes the expensive
+reads of the external drive and also lends itself well to parallel computing.
+
 */
 
 #include <stdio.h>
