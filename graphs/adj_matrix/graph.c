@@ -16,6 +16,7 @@ typedef struct graph {
     bool **edges;
 } graph;
 
+
 graph *createGraph(int numberOfNodes)
 {
     graph *g = malloc(sizeof(*g));
@@ -25,7 +26,7 @@ graph *createGraph(int numberOfNodes)
 
     g->numberOfNodes = numberOfNodes;
 
-    g->edges = calloc(sizeof(bool *), g->numberOfNodes);
+    g->edges = calloc(g->numberOfNodes, sizeof(bool *));
 
     if (g->edges == NULL) {
         free(g);
@@ -33,7 +34,7 @@ graph *createGraph(int numberOfNodes)
     }
 
     for (int i = 0; i < g->numberOfNodes; ++i) {
-        g->edges[i] = calloc(sizeof(bool), g->numberOfNodes);
+        g->edges[i] = calloc(g->numberOfNodes, sizeof(bool));
 
         if (g->edges[i] == NULL) {
             destroyGraph(g);
